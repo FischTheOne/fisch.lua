@@ -1,7 +1,7 @@
 local deinBenutzername = "elias123_robo"
 
-local normaleGeschwindigkeit = 16 -- Standardgeschwindigkeit
-local erhöhteGeschwindigkeit = 50 -- Geschwindigkeit nur für dich
+local normaleGeschwindigkeit = 16 -- 
+local erhöhteGeschwindigkeit = 50 -- 
 
 local Players = game:GetService("Players")
 
