@@ -1,4 +1,4 @@
-local deinBenutzername = "elias123robo"
+local deinBenutzername = "elias123_robo"
 
 local normaleGeschwindigkeit = 16 -- Standardgeschwindigkeit
 local erhöhteGeschwindigkeit = 50 -- Geschwindigkeit nur für dich
