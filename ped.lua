@@ -1,40 +1,17 @@
-local deinBenutzername = "elias123_robo"
+local yourUsername = "elias123robo"
+local increasedSpeed = 50
+local normalSpeed = 16
 
-local normaleGeschwindigkeit = 16 -- 
-local erhöhteGeschwindigkeit = 50 -- 
+local function adjustSpeed(player)
+    player.CharacterAdded:Connect(function(character)
+        local humanoid = character:WaitForChild("Humanoid")
+        humanoid.WalkSpeed = (player.Name == yourUsername) and increasedSpeed or normalSpeed
+    end)
+end
 
 local Players = game:GetService("Players")
-
-local function setzeGeschwindigkeit(player)
-    if player.Name == deinBenutzername then
-        player.CharacterAdded:Connect(function(character)
-            local humanoid = character:WaitForChild("Humanoid")
-            humanoid.WalkSpeed = erhöhteGeschwindigkeit
-        end)
-        if player.Character then
-            local humanoid = player.Character:FindFirstChild("Humanoid")
-            if humanoid then
-                humanoid.WalkSpeed = erhöhteGeschwindigkeit
-            end
-        end
-    else
-        player.CharacterAdded:Connect(function(character)
-            local humanoid = character:WaitForChild("Humanoid")
-            humanoid.WalkSpeed = normaleGeschwindigkeit
-        end)
-        if player.Character then
-            local humanoid = player.Character:FindFirstChild("Humanoid")
-            if humanoid then
-                humanoid.WalkSpeed = normaleGeschwindigkeit
-            end
-        end
-    end
-end
+Players.PlayerAdded:Connect(adjustSpeed)
 
 for , player in ipairs(Players:GetPlayers()) do
-    setzeGeschwindigkeit(player)
+    adjustSpeed(player)
 end
-
-Players.PlayerAdded:Connect(function(player)
-    setzeGeschwindigkeit(player)
-end)
