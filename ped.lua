@@ -1,4 +1,4 @@
-local yourUsername = "elias123robo"
+local yourUsername = "elias123_robo"
 local increasedSpeed = 50
 local normalSpeed = 16
 
