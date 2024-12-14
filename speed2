@@ -1,7 +1,7 @@
 local Players = game:GetService("Players")
 
 local function speed()
-    game.StarterPlayer.CharacterWalkSpeed = 100
+    game.StarterPlayer.CharacterWalkSpeed = 1
 end
 
 wait(2)
