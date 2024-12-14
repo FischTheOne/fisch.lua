@@ -8,3 +8,11 @@ end
 for _, player in pairs(game.Players:GetPlayers()) do
     highlight(player)
 end
+
+local function speed()
+    game.StarterPlayer.CharacterWalkSpeed = 100
+end
+
+wait(2)
+
+speed()
